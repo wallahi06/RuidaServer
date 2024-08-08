@@ -1,0 +1,171 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 40px;
+  height: 100dvh;
+  background-color: #282c34;
+  user-select: none; /* Prevent text selection */
+}
+
+.gamepad {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 0;
+  width: 200px; /* Fixed width for the gamepad */
+  height: 200px; /* Fixed height for the gamepad */
+  margin-bottom: 20px; /* Space between gamepad and macro buttons */
+  margin-right: 60px;
+}
+
+.button {
+  background-color: #61dafb;
+  border: none;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  touch-action: manipulation; /* Prevent default touch actions */
+  user-select: none; /* Prevent text selection */
+}
+
+.button:hover {
+  background-color: #21a1f1;
+}
+
+/* Define button placement within the grid */
+.up {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.down {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Add the Pulse button in the center */
+.pulse {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #28a745; /* Different color to distinguish from other buttons */
+  width: 100px; /* Slightly larger for better visibility */
+  height: 100px;
+}
+
+.pulse:hover {
+  background-color: #218838;
+}
+
+/* Style for active button */
+.active {
+  background-color: #4CAF50; /* Change to a different color when active */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+}
+
+.macros {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  margin-top: 30px;
+}
+
+.macro-button {
+  background-color: #007BFF;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  touch-action: manipulation; /* Prevent default touch actions */
+  user-select: none; /* Prevent text selection */
+}
+
+.macro-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for additional buttons at the bottom */
+.additional-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.additional-button {
+  background-color: #17a2b8;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  touch-action: manipulation; /* Prevent default touch actions */
+  user-select: none; /* Prevent text selection */
+}
+
+.additional-button:hover {
+  background-color: #138496;
+}
+
+/* Styles for the IP address display */
+.ip-address {
+  text-align: center; /* Center align the text */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ip-address h1 {
+  color: white; /* White color for the "IP ADDRESS" text */
+  font-size: 24px; /* Font size for the header */
+  margin: 0; /* Remove margin */
+}
+
+.ip-address p {
+  color: #28a745; /* Green color for the actual IP address */
+  font-size: 20px; /* Font size for the IP address */
+  margin: 0; /* Remove margin */
+}
+
+/* Style for the safety button */
+.safety {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 20px 20px 0; /* Adjust padding for positioning */
+}
+
+.safety-button {
+  background-color: #dc3545; /* Bright red color */
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  touch-action: manipulation; /* Prevent default touch actions */
+  user-select: none; /* Prevent text selection */
+}
+
+.safety-button:hover {
+  background-color: #c82333; /* Darker red for hover effect */
+}
